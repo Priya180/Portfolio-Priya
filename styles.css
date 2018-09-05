@@ -1,0 +1,255 @@
+body {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-img {
+  background: url(assets/image2.jpg) no-repeat center;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+}
+
+.hero-txt {
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  left: 35%;
+  color: white;
+  font-size: 25px;
+}
+
+.hero-txt h4 {
+  color: #d11255;
+}
+
+.nav a {
+  float: right;
+  text-decoration: none;
+  color: white;
+  padding-left: 10px;
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 15px;
+}
+
+.nav a:hover {
+  text-decoration-line: underline;
+}
+
+.content-1 {
+  display: flex;
+  padding: 20px;
+}
+
+.content-1 .about-img img {
+  border-radius: 50%;
+  width: 250px;
+  flex: 1;
+  margin-top: 50px;
+}
+
+.content-1 .aboutme p {
+  flex: 1;
+  font-size: 20px;
+  line-height: 2em;
+  margin-left: 20px;
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+.content-1 .aboutme h1 {
+  text-align: center;
+}
+
+.content-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(auto, auto);
+  grid-gap: 1em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.education, .skills, .project, .work, .certifications {
+  background: url(assets/image1.jpg) no-repeat center;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.education h1, .skills h1, .project h1, .work h1, .certifications h1 {
+  text-align: center;
+  color: #17b7b2;
+}
+
+.education div {
+  border: 1px solid black;
+  border-radius: 25px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  width: 80%;
+  height: auto;
+  padding-left: 18px;
+  /* text-align: center; */
+  font-size: 20px;
+  color: black;
+  background-color: white;
+}
+
+.content-2 div {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.skills li  {
+  text-align: center;
+  color: white;
+  list-style-type: none;
+  font-size: 20px;
+  padding: 8px;
+  line-height: 1em;
+}
+.project p, .work p, .certifications li{
+  color: white;
+  list-style-type: none;
+  font-size: 20px;
+  padding: 8px;
+  line-height: 1em;
+
+}
+
+.work p {
+  font-size: 20px;
+}
+
+.skills li {
+  font-family: 'Kaushan Script', cursive;
+}
+
+.contact {
+  height: 400px;
+  background: url(assets/contact1.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.contact h4, .contact p {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 20px;
+}
+
+.contact h4 {
+  font-family: sans-serif;
+  background-color: #d11255;
+  padding-bottom: 20px;
+  color: white;
+}
+
+.contact, .social {
+  text-align: center;
+}
+
+#soci {
+  color: white;
+}
+
+.fa {
+  padding: 15px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 40%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #0b4ea0;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+@media screen and (max-width:640px) {
+  .nav a {
+    float: none;
+    width: 100%;
+  }
+  .hero-txt {
+    position: absolute;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 30%;
+    color: white;
+  }
+  .content-1 {
+    flex-direction: column;
+  }
+  .content-1 img {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .content-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(auto, auto);
+  }
+  .content-2 .education {
+    grid-column: 1/4;
+  }
+  .education div {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .content-2 .skills {
+    grid-column: 1/4;
+  }
+  .content-2 .project {
+    grid-column: 1/4;
+  }
+  .content-2 .work {
+    grid-column: 1/4;
+  }
+  .content-2 .certifications {
+    grid-column: 1/4;
+    margin-right: -30px;
+  }
+}
+
+@media screen and (min-width:641px) {
+  .content-2 .education {
+    grid-column: 1;
+    grid-row: 1/3;
+  }
+  .content-2 .skills {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .content-2 .project {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .content-2 .work {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .content-2 .certifications {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  .certifications li {
+    list-style-type: disc;
+    padding: 25px;
+  }
+}
